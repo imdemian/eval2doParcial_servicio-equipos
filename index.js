@@ -5,7 +5,7 @@ const conectarBD = require("./src/db/database");
 const equiposRoutes = require("./src/routes/equipos.routes");
 
 const app = express();
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 
 conectarBD();
 app.use(cors());
